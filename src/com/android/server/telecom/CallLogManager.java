@@ -46,7 +46,7 @@ import android.telephony.SubscriptionManager;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.server.telecom.callfiltering.CallFilteringResult;
 
-import org.lineageos.lib.phone.SensitivePhoneNumbers;
+import org.portalrom.lib.phone.SensitivePhoneNumbers;
 
 import java.util.Arrays;
 import java.util.Locale;
