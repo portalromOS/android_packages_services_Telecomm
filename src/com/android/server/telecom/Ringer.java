@@ -37,7 +37,7 @@ import android.telecom.TelecomManager;
 import com.android.internal.annotations.VisibleForTesting;
 import com.android.server.telecom.LogUtils.EventTimer;
 
-import lineageos.providers.LineageSettings;
+import portalrom.providers.PortalRomSettings;
 
 import java.util.ArrayList;
 import java.util.concurrent.CompletableFuture;
@@ -300,12 +300,12 @@ public class Ringer {
                         mVolumeShaperConfig, attributes.isRingerAudible(), isVibratorEnabled);
             } else {
                 final ContentResolver cr = mContext.getContentResolver();
-                if (LineageSettings.System.getInt(cr,
-                        LineageSettings.System.INCREASING_RING, 0) != 0) {
-                    float startVolume = LineageSettings.System.getFloat(cr,
-                            LineageSettings.System.INCREASING_RING_START_VOLUME, 0.1f);
-                    int rampUpTime = LineageSettings.System.getInt(cr,
-                            LineageSettings.System.INCREASING_RING_RAMP_UP_TIME, 20);
+                if (PortalRomSettings.System.getInt(cr,
+                        PortalRomSettings.System.INCREASING_RING, 0) != 0) {
+                    float startVolume = PortalRomSettings.System.getFloat(cr,
+                            PortalRomSettings.System.INCREASING_RING_START_VOLUME, 0.1f);
+                    int rampUpTime = PortalRomSettings.System.getInt(cr,
+                            PortalRomSettings.System.INCREASING_RING_RAMP_UP_TIME, 20);
                     if (mVolumeShaperConfig == null
                         || mRampingRingerDuration != rampUpTime
                         || mRampingRingerStartVolume != startVolume) {
